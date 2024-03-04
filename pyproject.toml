@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "average-face"
+description = "Average Face"
+readme = "README.md"
+requires-python = ">= 3.10"
+version = "0.0.1"
+dependencies = [
+    "numpy ~= 1.26.4",
+    "opencv-python ~= 4.9.0.80",
+    "tqdm ~= 4.66.2",
+    "pillow ~= 10.2.0",
+    "scipy ~= 1.12.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = [
+    "average_face",
+]
+
+
+[tool.isort]
+include_trailing_comma = true
+multi_line_output = 3
+line_length = 120
+profile = "black"
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+explicit_package_bases = true
+show_error_context = true
+strict = true
+show_column_numbers = true
+namespace_packages = true
+disallow_subclassing_any = false
+disallow_untyped_decorators = false
+ignore_missing_imports = true
+warn_return_any = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+follow_imports = "silent"
+exclude = [
+    "venv",
+]

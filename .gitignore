@@ -1,0 +1,11 @@
+__pycache__/
+venv/
+
+average_face.egg-info/
+
+average-face-data/
+/data/
+shape_predictor_68_face_landmarks.dat
+movie.mp4
+
+/scripts/for_twentieth_anniversary_party.py
